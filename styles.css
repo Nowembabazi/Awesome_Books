@@ -1,3 +1,103 @@
 body {
   padding: 0;
 }
+
+#list {
+  border: 2px solid black;
+}
+
+.awesome {
+  margin: auto;
+  width: 50%;
+  padding: 12px;
+}
+
+.title {
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 48px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  margin-left: 18px;
+}
+
+.ul-links {
+  list-style: none;
+  display: flex;
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+li {
+  margin-right: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.ul-links li a:hover {
+  color: #1e54dd;
+}
+
+#form {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+.date {
+  float: right;
+  padding-top: 6px;
+}
+
+input {
+  width: 100%;
+}
+
+#addButton {
+  float: right;
+}
+
+h2 {
+  text-align: center;
+}
+/* 
+.availableBook {
+  display: flex;
+  justify-content: space-between;
+  gap: 8.5rem;
+  align-items: center;
+  padding: 0 15px;
+  margin: 0;
+} */
+
+.availableBook:nth-child(even) {
+  background-color: rgb(245, 240, 240);
+}
+
+.availableBook:nth-child(odd) {
+  background-color: rgb(219, 214, 214);
+}
+
+hr {
+  width: 7rem;
+  margin-top: 18px;
+  height: 3px;
+  background-color: black;
+}
+
+button {
+  box-shadow: 2px 2px black;
+}
