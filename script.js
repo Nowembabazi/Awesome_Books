@@ -50,13 +50,8 @@ function displayBook() {
 
     const line = document.createElement('hr');
     container.appendChild(line);
-<<<<<<< HEAD
-  });
-};
-=======
   };
 }
->>>>>>> 162ec0ad02bdd1cd418f7700f9998b0eb5da3fdf
 
 function getFromLocalStorage() {
   const stringifyArray = localStorage.getItem('storedBooks');
@@ -69,18 +64,10 @@ if (localStorage.getItem('storedBooks') == null) {
 } else {
   getFromLocalStorage();
 }
-
-<<<<<<< HEAD
-const addBtn = document.getElementById('addButton')
-addBtn.addEventListener('click', () => {
-  const title = document.getElementById('title')
-  const author = document.getElementById('author')
-=======
 const addBtn = document.getElementById('addButton');
   addBtn.addEventListener('click', () => {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
->>>>>>> 162ec0ad02bdd1cd418f7700f9998b0eb5da3fdf
   bookObj(title.value, author.value);
   addToLocalStorage();
   displayBook();
