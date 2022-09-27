@@ -5,16 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Awesome Books</title>
+    <title>Awesome-Books.</title>
 </head>
 <body>
-    <h2>Awesome Books</h2>
-    <div id="list" class="list"></div>
-    <form id="form">
-        <input type="text" id="title" placeholder="Title" required><br><br>
-        <input type="text" id="author" placeholder="Author" required><br><br>
-        <button type="submit" id="addButton">Add</button>
-    </form>
+    <!-- <div class="awesome"> -->
+        <div class="title">
+            <h3> All Awesome Books. </h3>
+            <div class="links">
+                <ul class="ul-links">
+                    <li class="listLink">
+                        <a id="list-link" href="#list">List</a>
+                    </li>
+                    <li class="listLink">
+                        <a id="add-link" href="#add-new">Add New</a>
+                    </li>
+                    <li class="listLink">
+                        <a id="contact-link" href="#contact-list">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="date">September 26th 2022. 02:30pm.</div>
+        
+        <hr>
+
+        <div id="list" class="list"></div>
+        <div class="awesome-books" id="awesome-books">
+          <h2>Add a new Book</h2>
+           <form name="book" id="form">
+             <input type="text" id="title" name="title" placeholder="Title" required><br><br>
+             <input type="text" id="author" name="title" placeholder="Author" required><br><br>
+             <button type="submit" id="addButton" class="btn">Add</button>
+           </form>
+       </div>
+
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
