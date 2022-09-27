@@ -21,7 +21,7 @@ function booksFilter(index) {
 function displayBook() {
   const addedBooks = document.getElementById('list');
   addedBooks.innerHTML = '';
-  for (let i = 0; i < bookArray.length; i += 1){
+  for (let i = 0; i < bookArray.length; i += 1) {
     const container = document.createElement('div');
     container.classList.add('book');
     addedBooks.appendChild(container);
