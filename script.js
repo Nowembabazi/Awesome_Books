@@ -21,7 +21,7 @@ function booksFilter(index) {
 function displayBook() {
   const addedBooks = document.getElementById('list');
   addedBooks.innerHTML = '';
-  for (let i = 0; i < bookArray.length; i += 1)  {
+  for (let i = 0; i < bookArray.length; i += 1){
     const container = document.createElement('div');
     container.classList.add('book');
     addedBooks.appendChild(container);
@@ -50,14 +50,14 @@ function displayBook() {
 
     const line = document.createElement('hr');
     container.appendChild(line);
-  };
+  }
 }
 
 function getFromLocalStorage() {
   const stringifyArray = localStorage.getItem('storedBooks');
   bookArray = JSON.parse(stringifyArray);
   displayBook();
-};
+}
 
 if (localStorage.getItem('storedBooks') == null) {
   addToLocalStorage();
@@ -65,7 +65,7 @@ if (localStorage.getItem('storedBooks') == null) {
   getFromLocalStorage();
 }
 const addBtn = document.getElementById('addButton');
-  addBtn.addEventListener('click', () => {
+addBtn.addEventListener('click', () => {
   const title = document.getElementById('title');
   const author = document.getElementById('author');
   bookObj(title.value, author.value);
