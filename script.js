@@ -1,5 +1,5 @@
 class Books {
-  constructor (array) {
+   constructor (array) {
         this.bookArray = array;
     }
 
@@ -53,7 +53,7 @@ function displayBook() {
 
     container.appendChild(removeButton);
 
-    const line = document.createElement('hr');
+    // const line = document.createElement('hr');
     container.appendChild(line);
   }
 }
