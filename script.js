@@ -1,5 +1,5 @@
 class Books {
-  constructor (array) {
+   constructor (array) {
         this.bookArray = array;
     }
 
@@ -51,6 +51,7 @@ function displayBook() {
     };
 
     container2.appendChild(removeButton);
+   
   }
 }
 
