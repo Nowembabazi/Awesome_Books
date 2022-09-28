@@ -13,12 +13,11 @@ body {
 }
 
 .title {
-  border: 2px solid;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  height: 48px;
+  height: auto;
 }
 
 h3 {
@@ -58,8 +57,9 @@ a {
 }
 
 .date {
-  float: right;
-  padding-top: 6px;
+  padding: 6px 16px ;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 input {
@@ -73,22 +73,13 @@ input {
 h2 {
   text-align: center;
 }
-/* 
-.availableBook {
-  display: flex;
-  justify-content: space-between;
-  gap: 8.5rem;
-  align-items: center;
-  padding: 0 15px;
-  margin: 0;
-} */
 
-.availableBook:nth-child(even) {
+.book:nth-child(odd) {
   background-color: rgb(245, 240, 240);
 }
 
-.availableBook:nth-child(odd) {
-  background-color: rgb(219, 214, 214);
+.book:nth-child(even) {
+  background-color: white;
 }
 
 hr {
@@ -100,4 +91,11 @@ hr {
 
 button {
   box-shadow: 2px 2px black;
+  padding: 5px 15px;
+}
+
+.titleAuthor {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }

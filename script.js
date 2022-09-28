@@ -31,19 +31,18 @@ function displayBook() {
     container.classList.add('book');
     addedBooks.appendChild(container);
 
-    const bookTitle = document.createElement('p');
-    bookTitle.classList.add('title');
-    bookTitle.textContent = allBooks.bookArray[i].title;
-    container.appendChild(bookTitle);
+    const container2 = document.createElement('div');
+    container2.classList.add('titleAuthor');
+    container.appendChild(container2);
 
-    const bookAuthor = document.createElement('p');
-    bookAuthor.classList.add('author');
-    bookAuthor.textContent = allBooks.bookArray[i].author;
-    container.appendChild(bookAuthor);
+    const bookDetails = document.createElement('p');
+    bookDetails.classList.add('title');
+    bookDetails.textContent = `"${allBooks.bookArray[i].title}" by ${allBooks.bookArray[i].author}` ;
+    container2.appendChild(bookDetails);
 
     const removeButton = document.createElement('button');
     removeButton.classList.add('remove');
-    removeButton.textContent = 'remove';
+    removeButton.textContent = 'Remove';
 
     removeButton.onclick = () => {
       allBooks.booksFilter(allBooks.bookArray[i])
@@ -51,10 +50,7 @@ function displayBook() {
       displayBook();
     };
 
-    container.appendChild(removeButton);
-
-    const line = document.createElement('hr');
-    container.appendChild(line);
+    container2.appendChild(removeButton);
   }
 }
 
@@ -69,6 +65,7 @@ if (localStorage.getItem('storedBooks') == null) {
 } else {
   getFromLocalStorage();
 }
+
 const addBtn = document.getElementById('addButton');
 addBtn.addEventListener('click', () => {
   const title = document.getElementById('title');
