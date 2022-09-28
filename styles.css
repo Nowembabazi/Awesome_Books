@@ -99,3 +99,26 @@ button {
   justify-content: space-between;
   padding: 10px;
 }
+
+#contact-section {
+  width: 40%;
+  margin: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  #form {
+    width: 80%;
+  }
+
+  #contact-section {
+    width: 80%;
+}
+}
