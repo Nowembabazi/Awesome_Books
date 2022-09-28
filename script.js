@@ -1,15 +1,15 @@
 class Books {
-   constructor (array) {
-        this.bookArray = array;
-    }
+  constructor(array) {
+    this.bookArray = array;
+  }
 
-    bookObj(bookTitle, authorName){
-      const eachBook = {
-        title: bookTitle,
-        author: authorName,
-      };
-        this.bookArray.push(eachBook)
-    }
+  bookObj(bookTitle, authorName) {
+    const eachBook = {
+      title: bookTitle,
+      author: authorName,
+    };
+    this.bookArray.push(eachBook)
+  }
 
   booksFilter(eachBook) {
     this.bookArray = this.bookArray.filter((book) => book !== eachBook);
@@ -37,7 +37,7 @@ function displayBook() {
 
     const bookDetails = document.createElement('p');
     bookDetails.classList.add('title');
-    bookDetails.textContent = `"${allBooks.bookArray[i].title}" by ${allBooks.bookArray[i].author}` ;
+    bookDetails.textContent = `"${allBooks.bookArray[i].title}" by ${allBooks.bookArray[i].author}`;
     container2.appendChild(bookDetails);
 
     const removeButton = document.createElement('button');
@@ -45,27 +45,25 @@ function displayBook() {
     removeButton.textContent = 'Remove';
 
     removeButton.onclick = () => {
-      allBooks.booksFilter(allBooks.bookArray[i])
+      allBooks.booksFilter(allBooks.bookArray[i]);
       addToLocalStorage();
       displayBook();
     };
-
     container2.appendChild(removeButton);
-   
   }
-}
+};
 
 function getFromLocalStorage() {
   const stringifyArray = localStorage.getItem('storedBooks');
   allBooks.bookArray = JSON.parse(stringifyArray);
   displayBook();
-}
+};
 
 if (localStorage.getItem('storedBooks') == null) {
   addToLocalStorage();
 } else {
   getFromLocalStorage();
-}
+};
 
 const addBtn = document.getElementById('addButton');
 addBtn.addEventListener('click', () => {
