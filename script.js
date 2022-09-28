@@ -8,7 +8,7 @@ class Books {
       title: bookTitle,
       author: authorName,
     };
-    this.bookArray.push(eachBook)
+    this.bookArray.push(eachBook);
   }
 
   booksFilter(eachBook) {
@@ -51,19 +51,19 @@ function displayBook() {
     };
     container2.appendChild(removeButton);
   }
-};
+}
 
 function getFromLocalStorage() {
   const stringifyArray = localStorage.getItem('storedBooks');
   allBooks.bookArray = JSON.parse(stringifyArray);
   displayBook();
-};
+}
 
 if (localStorage.getItem('storedBooks') == null) {
   addToLocalStorage();
 } else {
   getFromLocalStorage();
-};
+}
 
 const addBtn = document.getElementById('addButton');
 addBtn.addEventListener('click', () => {
