@@ -80,23 +80,23 @@ const addNew = document.getElementById('addNew');
 const contact_section = document.getElementById('contact-section');
 
 // Nav buttons
-const list_link = document.getElementById('list-link');
- const add_link = document.getElementById('add-link');
-const contact_link = document.getElementById('contact-link');
+const listLink = document.getElementById('list-link');
+ const addLink = document.getElementById('add-link');
+const contactLink = document.getElementById('contact-link');
 
-list_link.addEventListener('click', () => {
+listLink.addEventListener('click', () => {
   list.classList.remove('hide');
   addNew.classList.add('hide');
   contact_section.classList.add('hide');
 });
 
-add_link.addEventListener('click', () => {
+addLink.addEventListener('click', () => {
   addNew.classList.remove('hide');
   list.classList.add('hide');
   contact_section.classList.add('hide');
 });
 
-contact_link.addEventListener('click', () => {
+contactLink.addEventListener('click', () => {
   contact_section.classList.remove('hide');
   addNew.classList.add('hide');
   list.classList.add('hide');
