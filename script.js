@@ -77,27 +77,27 @@ addBtn.addEventListener('click', () => {
 // Page content
 const list = document.getElementById('list');
 const addNew = document.getElementById('addNew');
-const contact_section = document.getElementById('contact-section');
+const contactSection = document.getElementById('contact-section');
 
 // Nav buttons
 const listLink = document.getElementById('list-link');
- const addLink = document.getElementById('add-link');
+const addLink = document.getElementById('add-link');
 const contactLink = document.getElementById('contact-link');
 
 listLink.addEventListener('click', () => {
   list.classList.remove('hide');
   addNew.classList.add('hide');
-  contact_section.classList.add('hide');
+  contactSection.classList.add('hide');
 });
 
 addLink.addEventListener('click', () => {
   addNew.classList.remove('hide');
   list.classList.add('hide');
-  contact_section.classList.add('hide');
+  contactSection.classList.add('hide');
 });
 
 contactLink.addEventListener('click', () => {
-  contact_section.classList.remove('hide');
+  contactSection.classList.remove('hide');
   addNew.classList.add('hide');
   list.classList.add('hide');
 });
