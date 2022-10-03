@@ -134,3 +134,9 @@ button {
     width: 80%;
   }
 }
+
+.no_book {
+  font-size: 40px;
+  font-style: italic;
+  text-align: center;
+}
